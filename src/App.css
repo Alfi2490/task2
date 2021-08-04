@@ -8,3 +8,8 @@
   padding:20px 10px;
 }
 
+@media only screen and (max-width: 481px){
+  .App{
+    width: 440px;
+  }
+}
