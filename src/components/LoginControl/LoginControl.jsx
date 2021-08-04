@@ -29,7 +29,7 @@ class LoginControl extends React.Component {
 
         return (
             <div>
-                <p>{isLoggedIn}</p>
+                <p>{isLoggedIn ? 'Logged' : 'Login, please'}</p>
                 {button}
             </div>
         )
