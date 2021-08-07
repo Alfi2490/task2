@@ -5,7 +5,7 @@ class Reservation extends React.Component {
         super(props);
         this.state = {
             isGoing: true,
-            numberOfGuests: 2
+            numberOfGuests: '2'
         };
         this.handleInputChange = this.handleInputChange.bind(this);
     }
@@ -34,7 +34,7 @@ class Reservation extends React.Component {
                 <label>
                     Number of guests:
                     <input 
-                        name="numberofGuests"
+                        name="numberOfGuests"
                         type="number"
                         value={this.state.numberOfGuests}
                         onChange={this.handleInputChange} />

@@ -10,10 +10,15 @@ function App() {
   return (
     <div className="App">
       <Clock />
+      <br/>
       <Toggle />
+      <br/>
       <LoginControl/>
+      <br/>
       <Banner />
+      <br/>
       <Reservation />
+      <br/>
       <Calculator />
     </div>
   );
