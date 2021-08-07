@@ -24,13 +24,19 @@ class Calculator extends React.Component {
     render() {
         const scale = this.state.scale;
         const temperature = this.state.temperature;
+        const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+        const farenheit = scale === 'c' ? tryConvert(temperature, toFarenheit) : temperature;
 
         return (
             <fieldset>
-                <legend>Enter temperature in Celsius:</legend>
-                <input 
-                    value={temperature}
-                    onChange={this.handleChange}/>
+                <TemperatureInput
+                    scale="c"
+                    temperature={celsius}
+                    onTemperatureChange={this.handleCelsiusChange} />
+                <TemperatureInput
+                    scale="f"
+                    temperature={farenheit}
+                    onTemperatureChange={this.handleFarenheitChange} />
                 <BoilingVerdict
                     celsius={parseFloat(temperature)}/>
             </fieldset>
