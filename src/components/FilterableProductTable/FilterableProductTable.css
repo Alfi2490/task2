@@ -1,0 +1,7 @@
+.FilterableProductTable{
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    padding: 10px;
+}
