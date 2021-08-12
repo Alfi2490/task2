@@ -14,10 +14,10 @@ function ItemForm(props) {
         inputs.push(<Input key={i} name={keys[i]} placeholder={values[i]} disabled/>)
     }
 
-    return <form className="Form">
+    return <form onSubmit={e => e.preventDefault()} className="Form">
         {inputs}
         <p>{parseFloat(item.amount) * parseFloat(item.price)}</p>
-        <button>X</button>
+        <button onClick={() => props.onRemove(item.name)}>X</button>
         <button>+</button>
     </form>
 }

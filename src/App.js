@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Clock />
-      <TaskList items={ITEMS}/>
+      <TaskList />
       {/* <Toggle /> */}
       {/* <LoginControl/> */}
       {/* <Banner /> */}
@@ -33,11 +33,5 @@ function App() {
 //   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 // ];
 
-const ITEMS = [
-  {name: 'Banana', type: 'Fruit', unit:'kg', amount: '2', price: '5'},
-  {name: 'Keyboard', type: 'Electronic', unit:'thing', amount: '4', price: '8'},
-  {name: 'Sunglasses', type: 'Accesoares', unit:'thing', amount: '6', price: '15'},
-  {name: 'Monitor', type: 'Electronic', unit:'thing', amount: '1', price: '50'},
-]
 
 export default App;
