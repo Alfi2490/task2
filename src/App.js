@@ -7,11 +7,12 @@ import Clock from './components/Clock/Clock';
 // import Calculator from './components/Claculator/Calculator';
 // import SignUpDialog from './components/SingUpDialog/SingUpDialog';
 // import FilterableProductTable from './components/FilterableProductTable/FilterableproductTable';
-
+import TaskList from './components/TaskList/TaskList';
 function App() {
   return (
     <div className="App">
       <Clock />
+      <TaskList items={ITEMS}/>
       {/* <Toggle /> */}
       {/* <LoginControl/> */}
       {/* <Banner /> */}
