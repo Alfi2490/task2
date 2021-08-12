@@ -7,13 +7,11 @@ import Clock from './components/Clock/Clock';
 // import Calculator from './components/Claculator/Calculator';
 // import SignUpDialog from './components/SingUpDialog/SingUpDialog';
 // import FilterableProductTable from './components/FilterableProductTable/FilterableproductTable';
-import TaskList from './components/TaskList/TaskList.jsx';
 
 function App() {
   return (
     <div className="App">
       <Clock />
-      <TaskList items={ITEMS} />
       {/* <Toggle /> */}
       {/* <LoginControl/> */}
       {/* <Banner /> */}
@@ -35,10 +33,10 @@ function App() {
 // ];
 
 const ITEMS = [
-  {name: 'Banana', type: 'fruit', unit:'kg', amount: '2', price: '5'},
-  {name: 'Keyboard', type: 'electronic', unit:'thing', amount: '4', price: '8'},
-  {name: 'Sunglasses', type: 'accesoares', unit:'thing', amount: '6', price: '15'},
-  {name: 'Monitor', type: 'electronic', unit:'thing', amount: '1', price: '50'},
+  {name: 'Banana', type: 'Fruit', unit:'kg', amount: '2', price: '5'},
+  {name: 'Keyboard', type: 'Electronic', unit:'thing', amount: '4', price: '8'},
+  {name: 'Sunglasses', type: 'Accesoares', unit:'thing', amount: '6', price: '15'},
+  {name: 'Monitor', type: 'Electronic', unit:'thing', amount: '1', price: '50'},
 ]
 
 export default App;
