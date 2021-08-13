@@ -1,6 +1,14 @@
-.Form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+.Form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 20px;
+  border-top: 2px solid white;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+  background-color: whitesmoke;
 }
+.Form .Total {
+  width: 40px;
+}/*# sourceMappingURL=ItemForm.css.map */
