@@ -59,6 +59,9 @@ function ItemForm(props) {
                 if (id === 'new') {
                     return
                 }
+                if (id !== item.name) {
+                    return
+                }
                 setEdit(false); 
             }
         }>Submit</button>

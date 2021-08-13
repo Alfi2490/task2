@@ -30,12 +30,15 @@ function TaskList() {
         if (id === 'new' && checkIndex !== -1) {
             alert('Item exists!');
             return;
-        }        
-        const index = items.findIndex(item => item.name === id);       
+        };
+        if (id !== itemEdited.name && checkIndex !== -1) {
+            alert('Item Exists!');
+            return
+        };        
+        const index = items.findIndex(item => item.name === id);    
         let [...tmp] = items;
         tmp.splice(index, 1 , itemEdited);
-        setItems(tmp);
-                                
+        setItems(tmp);                                
     }
 
     function onAdd() {   
