@@ -11,4 +11,7 @@
 }
 .Form .Total {
   width: 40px;
+}
+.Form:hover {
+  border: 1px solid #4e694e;
 }/*# sourceMappingURL=ItemForm.css.map */
