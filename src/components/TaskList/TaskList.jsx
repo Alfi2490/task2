@@ -26,12 +26,16 @@ function TaskList() {
             alert('Fill all inputs');
             return;
         };
-        
+        const checkIndex = items.findIndex(item => item.name === itemEdited.name);
+        if (id === 'new' && checkIndex !== -1) {
+            alert('Item exists!');
+            return;
+        }        
         const index = items.findIndex(item => item.name === id);       
         let [...tmp] = items;
         tmp.splice(index, 1 , itemEdited);
         setItems(tmp);
-                             
+                                
     }
 
     function onAdd() {   

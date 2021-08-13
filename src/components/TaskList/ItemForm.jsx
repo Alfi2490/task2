@@ -4,14 +4,16 @@ import './ItemForm.css'
 
 function ItemForm(props) {
 
+    let id = props.id || 'new';
+    let inputs = [];
+    let type = 'text';
+
     const [item, setItem] = useState(props.item);
 
-    const [edit, setEdit] = useState(item.name !== '' ? false : true);
+    const [edit, setEdit] = useState(id === 'new' ? true : false);
 
     const keys = Object.keys(item);
     const values = Object.values(item);
-    let inputs = [];
-    let type = 'text';
 
     function changeItem(keyName,newValue) {
         let {...tmp} = item;        
@@ -54,12 +56,15 @@ function ItemForm(props) {
                 if (item.name === '' || item.type === '' || item.unit === '' || item.amount === '' || item.price === '' ) {
                         return
                     }
+                if (id === 'new') {
+                    return
+                }
                 setEdit(false); 
             }
         }>Submit</button>
     </>;
 
-    return <form onSubmit={e => e.preventDefault()} className="Form" id={props.id} draggable>
+    return <form onSubmit={e => e.preventDefault()} className="Form" id={id} draggable>
         {inputs}
         <p className="Total">
             {item.amount === '' || item.price === '' ? 0 : (parseFloat(item.amount) * parseFloat(item.price))}
